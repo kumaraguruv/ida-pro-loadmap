@@ -20,15 +20,21 @@
 #define _OBJC_NO_COM
 //#define WINSHLWAPI
 #define NOGDI
-#include <windef.h>
+#if defined(_WIN32) || defined(_WIN64) 
+  #define snprintf _snprintf 
+  #define vsnprintf _vsnprintf 
+  #define strcasecmp _stricmp 
+  #define strncasecmp _strnicmp 
+#endif
+/*#include <windef.h>
 #include <basetyps.h>
 #include <cstdarg>
 #include <winbase.h>
-#include <winuser.h>
-//#include <windows.h>
+#include <winuser.h>*/
+#include <windows.h>
 
 // C RTL Debug Support Header Files
-//#include <crtdbg.h>
+#include <crtdbg.h>
 
 // Shell Lightweight API
 #include <winreg.h>

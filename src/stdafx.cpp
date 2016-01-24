@@ -2,9 +2,9 @@
 // LoadMap.pch will be the pre-compiled header
 // stdafx.obj will contain the pre-compiled type information
 
-#include <cstring>
-
 #include "stdafx.h"
+
+#include <cstring>
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief Changes extension in given file name buffer
